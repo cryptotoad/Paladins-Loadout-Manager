@@ -16,10 +16,10 @@ public class Skill {
         NONE,
         HEALING
     }
-    public String name;
-    public float cooldown; //What is the base cooldown?
-    public int damage; //how much damage does the skill do?
-    public float duration; //how long does the skill last?
+    public String name = "";
+    public float cooldown = 0; //What is the base cooldown?
+    public int damage = 0; //how much damage does the skill do?
+    public float duration = 0; //how long does the skill last?
     public boolean overTime = false; //does the skill apply over time?
     public int overTimeDamage = 0; //damage per second over time
     public int overTimeHealing = 0; //healing per second over time
@@ -34,4 +34,7 @@ public class Skill {
     public float stunDuration = 0; //How long the target is stunned for on use
     public DamageType damageType = DamageType.DIRECT; //damage type, for calculating reductions
     
+    public Skill() {
+        //Java makes us have a no-args constructor, but don't ever use this
+    }
 }

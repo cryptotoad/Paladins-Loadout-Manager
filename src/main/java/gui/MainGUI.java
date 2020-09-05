@@ -5,6 +5,11 @@
  */
 package gui;
 
+import championDefs.Champion;
+import championDefs.Talent;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import config.JsonLoader;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.UIManager;
@@ -64,7 +69,6 @@ public class MainGUI extends javax.swing.JFrame {
         jLabel52 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPanel4 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jSpinner1 = new javax.swing.JSpinner();
         jLabel1 = new javax.swing.JLabel();
@@ -148,6 +152,7 @@ public class MainGUI extends javax.swing.JFrame {
         jTextField11 = new javax.swing.JTextField();
         jTextField12 = new javax.swing.JTextField();
         jTextField13 = new javax.swing.JTextField();
+        jPanel4 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
@@ -320,19 +325,6 @@ public class MainGUI extends javax.swing.JFrame {
                     .addComponent(jLabel52))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 788, Short.MAX_VALUE)
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 509, Short.MAX_VALUE)
-        );
-
-        jTabbedPane1.addTab("Stats", jPanel4);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui/cards/background.png"))); // NOI18N
 
@@ -788,7 +780,6 @@ public class MainGUI extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)))
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel10)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel11))
@@ -884,6 +875,19 @@ public class MainGUI extends javax.swing.JFrame {
         );
 
         jTabbedPane1.addTab("Loadout", jPanel3);
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 788, Short.MAX_VALUE)
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 509, Short.MAX_VALUE)
+        );
+
+        jTabbedPane1.addTab("Skills", jPanel4);
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -1002,7 +1006,19 @@ public class MainGUI extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MainGUI().setVisible(true);
+                try {
+                    GsonBuilder builder = new GsonBuilder();
+                    builder.setPrettyPrinting().serializeNulls();
+                    Gson gson = builder.create();
+                    
+                    Champion testChamp = JsonLoader.loadJson("Seris");
+                    System.out.println(gson.toJson(testChamp.utilitySkill));
+                    Talent.applyModifications(testChamp, "Agony");
+                    System.out.println(gson.toJson(testChamp.utilitySkill));
+                    new MainGUI().setVisible(true);
+                } catch (Exception ex) {
+                    Logger.getLogger(MainGUI.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }

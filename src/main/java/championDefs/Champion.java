@@ -14,14 +14,23 @@ import java.util.ArrayList;
 public class Champion {
     
     public String name;
-    public Talent talent;
+    public String talent;
     public Skill mainFire;
     public Skill ultimate;
     public Skill altFire;
     public Skill moveSkill;
     public Skill utilitySkill;
-    public int health;
+    public int health = 2200;
+    public int ccReduction = 0;
+    public int dmgReduction = 0;
+    public int blastDamageReduction = 0;
+    public int directDamageReduction = 0;
+    public int healReduction = 0;
+    
+    
     public float moveSpeed = 1; //All champions have the same base speed, this is just to store modifications
     
-    
+    public Champion() {
+        
+    }
 }
