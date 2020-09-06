@@ -102,6 +102,6 @@
   "blastDamageReduction": 0,
   "directDamageReduction": 0,
   "healReduction": 0,
-  "moveSpeed": 1.0
+  "moveSpeed": 365
 }
 

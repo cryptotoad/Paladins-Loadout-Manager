@@ -25,11 +25,7 @@ public class JsonLoader {
     public static Champion loadJson(String champName) throws Exception {
         Gson gson = new Gson();
         Champion conf;
-        try {
-            conf = gson.fromJson(new FileReader(jsonPath + champName + ".json"), Champion.class);
-        } catch (FileNotFoundException ex) {
-            return new Champion();
-        }
+        conf = gson.fromJson(new FileReader(jsonPath + champName + ".json"), Champion.class);
         return conf;
     }
     

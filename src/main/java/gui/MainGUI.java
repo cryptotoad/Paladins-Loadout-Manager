@@ -24,6 +24,8 @@ public class MainGUI extends javax.swing.JFrame {
     /**
      * Creates new form mainGU
      */
+    Champion currChamp;
+    
     public MainGUI() {
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
@@ -153,6 +155,18 @@ public class MainGUI extends javax.swing.JFrame {
         jTextField12 = new javax.swing.JTextField();
         jTextField13 = new javax.swing.JTextField();
         jPanel4 = new javax.swing.JPanel();
+        lblMainFire = new javax.swing.JLabel();
+        lblMoveSkill = new javax.swing.JLabel();
+        lblUtilitySkill = new javax.swing.JLabel();
+        lblAltFire = new javax.swing.JLabel();
+        lblSkill1 = new javax.swing.JLabel();
+        lblSkill3 = new javax.swing.JLabel();
+        lblSkill2 = new javax.swing.JLabel();
+        lblSkill4 = new javax.swing.JLabel();
+        lblMainFireName = new javax.swing.JLabel();
+        lblMoveSkillName = new javax.swing.JLabel();
+        lblAltFireName = new javax.swing.JLabel();
+        lblUtilitySkillName = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
@@ -237,8 +251,8 @@ public class MainGUI extends javax.swing.JFrame {
                             .addComponent(jLabel4))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cmbTalent, 0, 1, Short.MAX_VALUE)
-                            .addComponent(cmbChampion, 0, 81, Short.MAX_VALUE)))
+                            .addComponent(cmbTalent, 0, 128, Short.MAX_VALUE)
+                            .addComponent(cmbChampion, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -794,7 +808,7 @@ public class MainGUI extends javax.swing.JFrame {
                 .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLayeredPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(27, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -876,15 +890,111 @@ public class MainGUI extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Loadout", jPanel3);
 
+        try {
+            lblMainFire.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui/skills/notFound.png"))); // NOI18N
+        } catch(Exception e) {
+            lblMainFire.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui/skills/notFound.png")));
+        }
+
+        try {
+            lblMoveSkill.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui/skills/notFound.png"))); // NOI18N
+        } catch(Exception e) {
+            lblMainFire.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui/skills/notFound.png")));
+        }
+
+        try {
+            lblUtilitySkill.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui/skills/notFound.png"))); // NOI18N
+        } catch(Exception e) {
+            lblMainFire.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui/skills/notFound.png")));
+        }
+
+        try {
+            lblAltFire.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui/skills/notFound.png"))); // NOI18N
+        } catch(Exception e) {
+            lblMainFire.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui/skills/notFound.png")));
+        }
+
+        lblSkill1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblSkill1.setText("Main Fire");
+
+        lblSkill3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblSkill3.setText("Alt Fire");
+
+        lblSkill2.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblSkill2.setText("Move Skill");
+
+        lblSkill4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        lblSkill4.setText("Utility Skill");
+
+        lblMainFireName.setText("Skill Name");
+
+        lblMoveSkillName.setText("Skill Name");
+
+        lblAltFireName.setText("Skill Name");
+
+        lblUtilitySkillName.setText("Skill Name");
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 788, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(lblAltFire)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblSkill3)
+                            .addComponent(lblAltFireName, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblUtilitySkill))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(lblMainFire)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblSkill1)
+                            .addComponent(lblMainFireName, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(138, 138, 138)
+                        .addComponent(lblMoveSkill)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lblSkill2)
+                    .addComponent(lblSkill4)
+                    .addComponent(lblUtilitySkillName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lblMoveSkillName, javax.swing.GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE))
+                .addContainerGap(119, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 509, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(lblMoveSkill)
+                        .addComponent(lblMainFire))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(lblSkill1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblMainFireName))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(lblSkill2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblMoveSkillName)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 220, Short.MAX_VALUE)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(lblUtilitySkill, javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(lblAltFire, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(lblSkill3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblAltFireName))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(lblSkill4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblUtilitySkillName)))
+                .addGap(37, 37, 37))
         );
 
         jTabbedPane1.addTab("Skills", jPanel4);
@@ -906,7 +1016,7 @@ public class MainGUI extends javax.swing.JFrame {
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1)
                     .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(0, 467, Short.MAX_VALUE)
+                        .addGap(0, 450, Short.MAX_VALUE)
                         .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -972,9 +1082,65 @@ public class MainGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void cmbChampionPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_cmbChampionPropertyChange
-        // TODO add your handling code here:
+        updateCurrChamp();
+        updateSkillImages();
+        updateSkillData();
+        
     }//GEN-LAST:event_cmbChampionPropertyChange
 
+    private void updateCurrChamp() {
+        try {
+            currChamp = JsonLoader.loadJson((String) cmbChampion.getSelectedItem());
+            System.out.println(currChamp.name);
+        } catch (Exception ex) {
+            System.out.println("Error loading champion data!");
+            currChamp = new Champion();
+        }
+    }
+    private void updateSkillImages() {
+        try {
+            lblMainFire.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui/skills/" + cmbChampion.getSelectedItem() + "/MainFire.png")));
+        } catch(Exception e) {
+            lblMainFire.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui/skills/notFound.png")));
+        }  
+        try {
+            lblAltFire.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui/skills/" + cmbChampion.getSelectedItem() + "/AltFire.png")));
+        } catch(Exception e) {
+            lblAltFire.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui/skills/notFound.png")));
+        }  
+        try {
+            lblMoveSkill.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui/skills/" + cmbChampion.getSelectedItem() + "/MoveSkill.png")));
+        } catch(Exception e) {
+            lblMoveSkill.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui/skills/notFound.png")));
+        }  
+        try {
+            lblUtilitySkill.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui/skills/" + cmbChampion.getSelectedItem() + "/UtilitySkill.png")));
+        } catch(Exception e) {
+            lblUtilitySkill.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui/skills/notFound.png")));
+        } 
+    }
+        private void updateSkillData() {
+            try {
+                lblMainFireName.setText(currChamp.mainFire.name);
+            } catch(Exception e) {
+                lblMainFireName.setText("Not Found");
+            }  
+            try {
+                lblAltFireName.setText(currChamp.altFire.name);
+            } catch(Exception e) {
+                lblAltFireName.setText("Not Found");
+            }  
+            try {
+                lblMoveSkillName.setText(currChamp.moveSkill.name);
+            } catch(Exception e) {
+                lblMoveSkillName.setText("Not Found");
+            }  
+            try {
+                lblUtilitySkillName.setText(currChamp.utilitySkill.name);
+            } catch(Exception e) {
+                lblUtilitySkillName.setText("Not Found");
+            }  
+        }
     /**
      * @param args the command line arguments
      */
@@ -1140,5 +1306,17 @@ public class MainGUI extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
+    private javax.swing.JLabel lblAltFire;
+    private javax.swing.JLabel lblAltFireName;
+    private javax.swing.JLabel lblMainFire;
+    private javax.swing.JLabel lblMainFireName;
+    private javax.swing.JLabel lblMoveSkill;
+    private javax.swing.JLabel lblMoveSkillName;
+    private javax.swing.JLabel lblSkill1;
+    private javax.swing.JLabel lblSkill2;
+    private javax.swing.JLabel lblSkill3;
+    private javax.swing.JLabel lblSkill4;
+    private javax.swing.JLabel lblUtilitySkill;
+    private javax.swing.JLabel lblUtilitySkillName;
     // End of variables declaration//GEN-END:variables
 }

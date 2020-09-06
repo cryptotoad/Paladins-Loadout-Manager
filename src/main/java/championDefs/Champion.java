@@ -26,6 +26,7 @@ public class Champion {
     public int blastDamageReduction = 0;
     public int directDamageReduction = 0;
     public int healReduction = 0;
+    public boolean formSwap = false;
     
     
     public float moveSpeed = 1; //All champions have the same base speed, this is just to store modifications

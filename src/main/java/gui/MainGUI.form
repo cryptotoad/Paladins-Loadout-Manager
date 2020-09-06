@@ -53,8 +53,8 @@
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="cmbTalent" pref="0" max="32767" attributes="0"/>
-                              <Component id="cmbChampion" pref="81" max="32767" attributes="0"/>
+                              <Component id="cmbTalent" pref="128" max="32767" attributes="0"/>
+                              <Component id="cmbChampion" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" attributes="0">
@@ -574,7 +574,7 @@
                           <Component id="jLayeredPane1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="jLayeredPane2" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace pref="27" max="32767" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -1327,15 +1327,181 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="788" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Component id="lblAltFire" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="lblSkill3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblAltFireName" min="-2" pref="121" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="lblUtilitySkill" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="lblMainFire" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="lblSkill1" min="-2" max="-2" attributes="0"/>
+                                      <Component id="lblMainFireName" min="-2" pref="121" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="138" max="-2" attributes="0"/>
+                                  <Component id="lblMoveSkill" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="lblSkill2" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblSkill4" min="-2" max="-2" attributes="0"/>
+                              <Component id="lblUtilitySkillName" alignment="0" max="32767" attributes="0"/>
+                              <Component id="lblMoveSkillName" alignment="0" pref="121" max="32767" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="119" max="32767" attributes="0"/>
+                      </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="509" max="32767" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" groupAlignment="1" attributes="0">
+                                  <Component id="lblMoveSkill" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblMainFire" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="lblSkill1" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="lblMainFireName" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="lblSkill2" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="lblMoveSkillName" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace pref="220" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="lblUtilitySkill" alignment="1" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblAltFire" alignment="1" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="lblSkill3" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="lblAltFireName" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Component id="lblSkill4" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="lblUtilitySkillName" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="lblMainFire">
+                  <Properties>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/gui/skills/notFound.png"/>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="} catch(Exception e) {&#xa;lblMainFire.setIcon(new javax.swing.ImageIcon(getClass().getResource(&quot;/gui/skills/notFound.png&quot;)));&#xa;}"/>
+                    <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="try {"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblMoveSkill">
+                  <Properties>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/gui/skills/notFound.png"/>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="} catch(Exception e) {&#xa;lblMainFire.setIcon(new javax.swing.ImageIcon(getClass().getResource(&quot;/gui/skills/notFound.png&quot;)));&#xa;}"/>
+                    <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="try {"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblUtilitySkill">
+                  <Properties>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/gui/skills/notFound.png"/>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="} catch(Exception e) {&#xa;lblMainFire.setIcon(new javax.swing.ImageIcon(getClass().getResource(&quot;/gui/skills/notFound.png&quot;)));&#xa;}"/>
+                    <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="try {"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblAltFire">
+                  <Properties>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/gui/skills/notFound.png"/>
+                    </Property>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="} catch(Exception e) {&#xa;lblMainFire.setIcon(new javax.swing.ImageIcon(getClass().getResource(&quot;/gui/skills/notFound.png&quot;)));&#xa;}"/>
+                    <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="try {"/>
+                  </AuxValues>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblSkill1">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="11" style="1"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Main Fire"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblSkill3">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="11" style="1"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Alt Fire"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblSkill2">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="11" style="1"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Move Skill"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblSkill4">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="11" style="1"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Utility Skill"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblMainFireName">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Skill Name"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblMoveSkillName">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Skill Name"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblAltFireName">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Skill Name"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblUtilitySkillName">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Skill Name"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
             </Container>
             <Container class="javax.swing.JPanel" name="jPanel5">
               <Constraints>
@@ -1354,7 +1520,7 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jScrollPane1" max="32767" attributes="0"/>
                               <Group type="102" attributes="0">
-                                  <EmptySpace min="0" pref="467" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="450" max="32767" attributes="0"/>
                                   <Component id="jButton3" min="-2" pref="129" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jButton2" min="-2" pref="154" max="-2" attributes="0"/>

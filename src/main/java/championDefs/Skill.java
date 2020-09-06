@@ -10,13 +10,17 @@ package championDefs;
  * @author toad
  */
 public class Skill {
+    
     enum DamageType {
         DIRECT,
         AREA,
         NONE,
         HEALING
     }
+    
     public String name = "";
+    public String description = "";
+    public Skill variantSkill = null;
     public float cooldown = 0; //What is the base cooldown?
     public int damage = 0; //how much damage does the skill do?
     public float duration = 0; //how long does the skill last?

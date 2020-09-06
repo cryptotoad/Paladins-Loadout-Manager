@@ -25,7 +25,7 @@ public class Talent {
     private static final String baseScriptPath = "./data/scripts/";
     
     public static String applyModifications(Champion target, String talentName) throws Exception {
-        String scriptPath = baseScriptPath + target.name + "/" + talentName + ".js";
+        String scriptPath = baseScriptPath + target.name + "/talents/" + talentName + ".js";
         File f = new File(scriptPath);
         if(!f.exists()) {
             return "Error! Invalid talent!";
