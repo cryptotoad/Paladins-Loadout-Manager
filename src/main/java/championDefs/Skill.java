@@ -39,6 +39,6 @@ public class Skill {
     public DamageType damageType = DamageType.DIRECT; //damage type, for calculating reductions
     
     public Skill() {
-        //Java makes us have a no-args constructor, but don't ever use this
+        //Java makes us have a no-args constructor
     }
 }

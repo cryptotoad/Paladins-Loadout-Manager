@@ -186,6 +186,11 @@ public class MainGUI extends javax.swing.JFrame {
         cmbTalent.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Agony", "Mortal Reach", "Soul Collector" }));
 
         cmbChampion.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Androxus", "Ash", "Atlas", "Barik", "Bomb King", "Buck", "Cassie", "Corvus", "Dredge", "Drogoz", "Evie", "Fernando", "Furia", "Grohk", "Grover", "Imani", "Inara", "Io", "Jenos", "Khan", "Kinessa", "Koga", "Lex", "Lian", "Maeve", "Makoa", "Mal'Damba", "Moji", "Pip", "Raum", "Ruckus", "Seris", "Sha Lin", "Skye", "Strix", "Talus", "Terminus", "Tiberius", "Torvald", "Tyra", "Viktor", "Vivian", "Willo", "Ying", "Zhin" }));
+        cmbChampion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmbChampionActionPerformed(evt);
+            }
+        });
         cmbChampion.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
                 cmbChampionPropertyChange(evt);
@@ -1087,6 +1092,10 @@ public class MainGUI extends javax.swing.JFrame {
         updateSkillData();
         
     }//GEN-LAST:event_cmbChampionPropertyChange
+
+    private void cmbChampionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbChampionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cmbChampionActionPerformed
 
     private void updateCurrChamp() {
         try {
